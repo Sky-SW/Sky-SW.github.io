@@ -127,3 +127,17 @@ $(document).bind('contextmenu', function(e) {
    e.stopImmediatePropagation();
    return false;
 });
+
+// Preloading images
+function preload(arrayOfImages) {
+   $(arrayOfImages).each(function(){
+       $('<img/>')[0].src = this;
+   });
+}
+
+preload([
+   "assets/img/background/background_art_imuong_2.jpg",
+   "assets/img/background/background_art_imuong_3.jpg",
+   "assets/img/background/background_art_imuong_4.jpg",
+   "assets/img/background/background_art_imuong_1.jpg",
+]);
